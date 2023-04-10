@@ -1,0 +1,73 @@
+[*]
+[*] GTKWave Analyzer v3.3.107 (w)1999-2020 BSI
+[*] Mon Apr 10 12:00:19 2023
+[*]
+[dumpfile] "/Users/shalan/work/ms_tmr32/ms_tmr32_wb_tb.vcd"
+[dumpfile_mtime] "Mon Apr 10 11:59:16 2023"
+[dumpfile_size] 28208
+[savefile] "/Users/shalan/work/ms_tmr32/ms_tmr32_wb_tb.gtkw"
+[timestart] 0
+[size] 2805 1313
+[pos] -1 -1
+*-10.721938 16080 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] ms_tmr32_wb_tb.
+[treeopen] ms_tmr32_wb_tb.muv.
+[sst_width] 265
+[signals_width] 176
+[sst_expanded] 1
+[sst_vpaned_height] 408
+@28
+ms_tmr32_wb_tb.clk_i
+ms_tmr32_wb_tb.rst_i
+@200
+-WB Bus
+@28
+ms_tmr32_wb_tb.cyc_i
+ms_tmr32_wb_tb.stb_i
+ms_tmr32_wb_tb.ack_o
+ms_tmr32_wb_tb.we_i
+@22
+ms_tmr32_wb_tb.sel_i[3:0]
+ms_tmr32_wb_tb.adr_i[31:0]
+ms_tmr32_wb_tb.dat_o[31:0]
+ms_tmr32_wb_tb.dat_i[31:0]
+@28
+ms_tmr32_wb_tb.irq
+@200
+-Timer Interface
+@28
+ms_tmr32_wb_tb.ctr_in
+ms_tmr32_wb_tb.pwm_out
+@200
+-Timer Wrapper
+@22
+ms_tmr32_wb_tb.muv.RIS_REG[31:0]
+ms_tmr32_wb_tb.muv.IM_REG[31:0]
+ms_tmr32_wb_tb.muv.MIS_REG[31:0]
+ms_tmr32_wb_tb.muv.ICR_REG[31:0]
+ms_tmr32_wb_tb.muv.CTRL_REG[31:0]
+ms_tmr32_wb_tb.muv.COUNTER_REG[31:0]
+@24
+ms_tmr32_wb_tb.muv.TMR_REG[31:0]
+ms_tmr32_wb_tb.muv.PWMCMP_REG[31:0]
+@200
+-Timer Signals
+@28
+ms_tmr32_wb_tb.muv.ip.clk
+ms_tmr32_wb_tb.muv.ip.rst_n
+ms_tmr32_wb_tb.muv.ip.en
+@29
+ms_tmr32_wb_tb.muv.ip.tmr_en
+@22
+ms_tmr32_wb_tb.muv.ip.tmr[31:0]
+@28
+ms_tmr32_wb_tb.muv.ip.up
+ms_tmr32_wb_tb.muv.ip.one_shot
+@22
+ms_tmr32_wb_tb.muv.ip.period[31:0]
+@28
+ms_tmr32_wb_tb.muv.ip.to_flag
+ms_tmr32_wb_tb.muv.ip.match_flag
+ms_tmr32_wb_tb.muv.ip.cp_flag
+[pattern_trace] 1
+[pattern_trace] 0

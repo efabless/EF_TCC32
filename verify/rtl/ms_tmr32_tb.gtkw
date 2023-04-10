@@ -1,0 +1,79 @@
+[*]
+[*] GTKWave Analyzer v3.3.107 (w)1999-2020 BSI
+[*] Sat Apr  8 19:53:40 2023
+[*]
+[dumpfile] "/Users/shalan/work/ms_tmr32/ms_tmr32_tb.vcd"
+[dumpfile_mtime] "Sat Apr  8 19:52:47 2023"
+[dumpfile_size] 20136
+[savefile] "/Users/shalan/work/ms_tmr32/ms_tmr32_tb.gtkw"
+[timestart] 23200
+[size] 1562 912
+[pos] -1 -1
+*-12.090911 48250 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TMR_tb.
+[sst_width] 193
+[signals_width] 159
+[sst_expanded] 1
+[sst_vpaned_height] 276
+@28
+TMR_tb.clk
+TMR_tb.ctr_in
+TMR_tb.rst_n
+TMR_tb.en
+@22
+TMR_tb.Test[3:0]
+@200
+-timer
+@22
+TMR_tb.clk_src[3:0]
+@8024
+TMR_tb.tmr[31:0]
+@24
+TMR_tb.period[31:0]
+@28
+TMR_tb.tmr_en
+TMR_tb.up
+TMR_tb.one_shot
+TMR_tb.to_flag
+@200
+-PWM
+@28
+TMR_tb.pwm_en
+TMR_tb.pwm_out
+@24
+TMR_tb.pwm_cmp[31:0]
+@28
+TMR_tb.ctr_in
+@24
+TMR_tb.tmr[31:0]
+@200
+-Capture
+@28
+TMR_tb.ctr_in
+TMR_tb.cp_event[1:0]
+TMR_tb.cp_en
+TMR_tb.cp_flag
+@24
+TMR_tb.cp_count[31:0]
+TMR_tb.muv.cp_ctr[31:0]
+@22
+TMR_tb.tmr[31:0]
+@28
+TMR_tb.muv.cp_neg
+TMR_tb.muv.cp_pos
+TMR_tb.muv.cp_counting
+@200
+-counter
+@24
+TMR_tb.ctr_match[31:0]
+@28
+TMR_tb.match_flag
+TMR_tb.tmr_en
+@24
+TMR_tb.tmr[31:0]
+@28
+TMR_tb.muv.match
+@29
+TMR_tb.muv.ctr_mode
+[pattern_trace] 1
+[pattern_trace] 0
