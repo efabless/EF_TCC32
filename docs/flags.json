@@ -1,0 +1,6 @@
+[
+    { "name": "to",   "bits": 1},
+    { "name": "cp",   "bits": 1, "rotate": -60},
+    { "name": "match",   "bits": 1, "rotate": -60},
+    { "bits": 29}
+]

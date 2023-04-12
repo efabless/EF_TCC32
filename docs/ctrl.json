@@ -1,0 +1,14 @@
+[
+    { "name": "en",   "bits": 1},
+    { "name": "tmr_en",   "bits": 1, "rotate": -60},
+    { "name": "pwm_en",   "bits": 1, "rotate": -60},
+    { "name": "cp_en",   "bits": 1, "rotate": -60},
+    { "bits": 4},
+    { "name": "clk_src",   "bits": 4},
+    { "bits": 4},
+    { "name": "up",   "bits": 1},
+    { "name": "one_shot",   "bits": 1, "rotate": -60},
+    { "bits": 6},
+    { "name": "cp_event",   "bits": 2},
+    { "bits": 6}
+]
