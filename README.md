@@ -59,6 +59,22 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with a wrapper f
 | pwm_out   | output    | wire           | PWM output            |
 | irq       | output    | wire           | Interrupt ReQuest output            |
 
+### ms_tmr32_apb
+<img src="./docs/ms_tmr32_apb.svg" alt= “” width="70%" height="70%">
+
+| Port name | Direction | Type         | Description |
+| --------- | --------- | ------------ | ----------- |
+| PCLK      | input     | wire         |             |
+| PRESETn   | input     | wire         |             |
+| PADDR     | input     | wire  [31:0] |             |
+| PWRITE    | input     | wire         |             |
+| PSEL      | input     | wire         |             |
+| PWDATA    | input     | wire  [31:0] |             |
+| PRDATA    | output    | wire  [31:0]       |             |
+| PREADY    | output    | wire             |             |
+| ctr_in    | input     | wire           | External events input            |
+| pwm_out   | output    | wire           | PWM output            |
+| irq       | output    | wire           | Interrupt ReQuest output            |
 ## ms_tmr32 Internals
 
 ![Diagram](./docs/ms_tmr32_bd.png "Diagram")
