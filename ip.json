@@ -31,6 +31,7 @@
             "name": "period",
             "size": "32",
             "mode": "rw",
+            "init": "0",
             "fields": [
                 {
                     "name": "period",
@@ -44,6 +45,7 @@
             "name": "pwmcmp",
             "size": "32",
             "mode": "rw",
+            "init": "0",
             "fields": [
                 {
                     "name": "pwm_cmp",
@@ -171,8 +173,6 @@
         "pol": "0"
     },
     "ports":[
-      {"name": "clk", "size": "1"},
-      {"name": "rst_n", "size": "1"},
       {"name": "ctr_in", "size": "1"},
       {"name": "pwm_out", "size": "1"},
       {"name": "period", "size": "32"},
