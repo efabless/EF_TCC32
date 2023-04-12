@@ -16,8 +16,8 @@ module ms_tmr32_apb (
     input  wire             PWRITE,
     input  wire             PSEL,
     input  wire  [31:0]     PWDATA,
-    output reg   [31:0]     PRDATA,
-    output reg              PREADY,
+    output wire  [31:0]     PRDATA,
+    output wire             PREADY,
     // IP External Interface
     input   wire            ctr_in,
     output  wire            pwm_out,
