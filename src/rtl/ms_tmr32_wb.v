@@ -161,21 +161,11 @@ module ms_tmr32_wb (
             else
                 ICR_REG <= 32'd0;
 
-/*
-    // CTRL Register
-    always @(posedge clk_i or posedge rst_i)
-        if(rst_i)
-            CTRL_REG <= 32'b0;
-        else if(wb_we & (adr_i==ICR_REG_ADDR))
-            CTRL_REG <= dat_i;
-*/
-
     `WB_REG(CTRL_REG, 32'd0)
     `WB_REG(MATCH_REG, 32'd0)
     `WB_REG(PWMCMP_REG, 32'd0)
     `WB_REG(PERIOD_REG, 32'd0)
     `WB_REG(IM_REG, 32'd0)
-
 
     // WB Data out
     assign  dat_o = (adr_i == TMR_REG_ADDR)     ?   TMR_REG     :
