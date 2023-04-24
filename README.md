@@ -1,5 +1,8 @@
 # ms_tmr32
-A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with a wrapper for the classical WB bus.
+A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers for:
+- [x] WB bus (Classical).
+- [x] APB (needs Verifications)
+- [ ] AHB (TBD)
 
 ## Features
 - Up/Down Counting
