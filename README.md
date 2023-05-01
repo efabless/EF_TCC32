@@ -90,7 +90,7 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
 |PWM|1|1|0|0-8|Generates PWM signal on <b>pwm_out</b>. <br> The duty cycle is determined by <b>pwm_cmp</b>. <br><b>period</b> determines the PWM signal period.|
 |Event Capture|0|0|1|0-8|Capture the time between two events on <b>ctr_in</b>.<br><b>cp_event</b> sets the event: 1:Raising Edge, 2:Falling Edge or 3:Both.<br><b>cp_flag</b> is set when two two consecutive events are observed; once set, <b>cp_count</b> shows the current count.|
 
-## Wishbone Registers
+## I/O Registers
 ### Timer Value Register [offset: 0x00, RO]
 ![Diagram](./docs/reg32.svg "Diagram")
 ### Timer Period Register [offset: 0x04, RW]
