@@ -6,7 +6,7 @@
 `timescale          1ns/1ns
 `default_nettype    none
 
-`define     WB_REG(name, init_value)    always @(posedge clk_i or posedge rst_i) if(rst_i) name <= init_value; else if(wb_we & (adr_i==``name``_ADDR)) name <= dat_i;
+`define     WB_REG(name, init_value)    always @(posedge clk_i or posedge rst_i) if(rst_i) name <= init_value; else if(wb_we & (adr_i[15:0]==``name``_ADDR)) name <= dat_i;
 
 module ms_tmr32_wb (
     // WB bus Interface
@@ -26,16 +26,16 @@ module ms_tmr32_wb (
     // IRQ
     output  wire            irq
 );
-    localparam      TMR_REG_ADDR        =   32'h00,
-                    PERIOD_REG_ADDR     =   32'h04,
-                    PWMCMP_REG_ADDR     =   32'h08,
-                    MATCH_REG_ADDR      =   32'h0C,
-                    COUNTER_REG_ADDR    =   32'h10,
-                    CTRL_REG_ADDR       =   32'h100,
-                    RIS_REG_ADDR        =   32'h200,
-                    MIS_REG_ADDR        =   32'h204,
-                    IM_REG_ADDR         =   32'h208,
-                    ICR_REG_ADDR        =   32'h20C;
+    localparam      TMR_REG_ADDR        =   16'h00,
+                    PERIOD_REG_ADDR     =   16'h04,
+                    PWMCMP_REG_ADDR     =   16'h08,
+                    MATCH_REG_ADDR      =   16'h0C,
+                    COUNTER_REG_ADDR    =   16'h10,
+                    CTRL_REG_ADDR       =   16'h100,
+                    RIS_REG_ADDR        =   16'h200,
+                    MIS_REG_ADDR        =   16'h204,
+                    IM_REG_ADDR         =   16'h208,
+                    ICR_REG_ADDR        =   16'h20C;
                     
     // Wires to connect the IP instance
     wire [31:0] period;
@@ -156,7 +156,7 @@ module ms_tmr32_wb (
         if(rst_i)
             ICR_REG <= 32'b0;
         else
-            if(wb_we & (adr_i==ICR_REG_ADDR))
+            if(wb_we & (adr_i[15:0]==ICR_REG_ADDR))
                 ICR_REG <= dat_i;
             else
                 ICR_REG <= 32'd0;
@@ -168,16 +168,16 @@ module ms_tmr32_wb (
     `WB_REG(IM_REG, 32'd0)
 
     // WB Data out
-    assign  dat_o = (adr_i == TMR_REG_ADDR)     ?   TMR_REG     :
-                    (adr_i == PERIOD_REG_ADDR)  ?   PERIOD_REG  :
-                    (adr_i == PWMCMP_REG_ADDR)  ?   PWMCMP_REG  :
-                    (adr_i == MATCH_REG_ADDR)   ?   MATCH_REG   :
-                    (adr_i == COUNTER_REG_ADDR) ?   PERIOD_REG  :
-                    (adr_i == CTRL_REG_ADDR)    ?   CTRL_REG    :
-                    (adr_i == RIS_REG_ADDR)     ?   RIS_REG     :
-                    (adr_i == MIS_REG_ADDR)     ?   MIS_REG     :
-                    (adr_i == IM_REG_ADDR)      ?   IM_REG      :
-                    (adr_i == ICR_REG_ADDR)     ?   32'd0       :   32'hDEADBEEF;
+    assign  dat_o = (adr_i[15:0] == TMR_REG_ADDR)     ?   TMR_REG     :
+                    (adr_i[15:0] == PERIOD_REG_ADDR)  ?   PERIOD_REG  :
+                    (adr_i[15:0] == PWMCMP_REG_ADDR)  ?   PWMCMP_REG  :
+                    (adr_i[15:0] == MATCH_REG_ADDR)   ?   MATCH_REG   :
+                    (adr_i[15:0] == COUNTER_REG_ADDR) ?   PERIOD_REG  :
+                    (adr_i[15:0] == CTRL_REG_ADDR)    ?   CTRL_REG    :
+                    (adr_i[15:0] == RIS_REG_ADDR)     ?   RIS_REG     :
+                    (adr_i[15:0] == MIS_REG_ADDR)     ?   MIS_REG     :
+                    (adr_i[15:0] == IM_REG_ADDR)      ?   IM_REG      :
+                    (adr_i[15:0] == ICR_REG_ADDR)     ?   32'd0       :   32'hDEADBEEF;
                  
     assign irq = |MIS_REG;
 
