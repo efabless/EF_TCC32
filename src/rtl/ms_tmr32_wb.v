@@ -172,7 +172,7 @@ module ms_tmr32_wb (
                     (adr_i[15:0] == PERIOD_REG_ADDR)  ?   PERIOD_REG  :
                     (adr_i[15:0] == PWMCMP_REG_ADDR)  ?   PWMCMP_REG  :
                     (adr_i[15:0] == MATCH_REG_ADDR)   ?   MATCH_REG   :
-                    (adr_i[15:0] == COUNTER_REG_ADDR) ?   PERIOD_REG  :
+                    (adr_i[15:0] == COUNTER_REG_ADDR) ?   COUNTER_REG :
                     (adr_i[15:0] == CTRL_REG_ADDR)    ?   CTRL_REG    :
                     (adr_i[15:0] == RIS_REG_ADDR)     ?   RIS_REG     :
                     (adr_i[15:0] == MIS_REG_ADDR)     ?   MIS_REG     :
