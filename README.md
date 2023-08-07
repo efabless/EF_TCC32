@@ -1,4 +1,4 @@
-# ms_tmr32
+# EF_TMR32
 A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers for:
 - [x] WB bus (Classical).
 - [x] APB (needs Verifications)
@@ -16,8 +16,8 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
     - Event Capture
 
 ## The Interface
-### ms_tmr32
-<img src="./docs/ms_tmr32.svg" alt= “” width="60%" height="60%">
+### EF_TMR32
+<img src="./docs/EF_TMR32.svg" alt= “” width="60%" height="60%">
 
 
 | Port name  | Direction | Type   | Description |
@@ -43,8 +43,8 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
 | cp_flag    | output    |        | Capture event received flag           |
 | en         | input     |        | Global enable            |
 
-### ms_tmr32_wb
-<img src="./docs/ms_tmr32_wb.svg" alt= “” width="80%" height="80%">
+### EF_TMR32_wb
+<img src="./docs/EF_TMR32_wb.svg" alt= “” width="80%" height="80%">
 
 | Port name | Direction | Type           | Description |
 | --------- | --------- | -------------- | ----------- |
@@ -62,8 +62,8 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
 | pwm_out   | output    | wire           | PWM output            |
 | irq       | output    | wire           | Interrupt ReQuest output            |
 
-### ms_tmr32_apb
-<img src="./docs/ms_tmr32_apb.svg" alt= “” width="70%" height="70%">
+### EF_TMR32_apb
+<img src="./docs/EF_TMR32_apb.svg" alt= “” width="70%" height="70%">
 
 | Port name | Direction | Type         | Description |
 | --------- | --------- | ------------ | ----------- |
@@ -78,9 +78,9 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
 | ctr_in    | input     | wire           | External events input            |
 | pwm_out   | output    | wire           | PWM output            |
 | irq       | output    | wire           | Interrupt ReQuest output            |
-## ms_tmr32 Internals
+## EF_TMR32 Internals
 
-![Diagram](./docs/ms_tmr32_bd.png "Diagram")
+![Diagram](./docs/EF_TMR32_bd.png "Diagram")
 
 ## Modes of Operation
 | mode | tmr_en | pwm_en | cp_en | clk_src| description |

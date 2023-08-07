@@ -2,10 +2,10 @@
 [*] GTKWave Analyzer v3.3.107 (w)1999-2020 BSI
 [*] Sat Apr  8 19:53:40 2023
 [*]
-[dumpfile] "/Users/shalan/work/ms_tmr32/ms_tmr32_tb.vcd"
+[dumpfile] "/Users/shalan/work/EF_TMR32/EF_TMR32_tb.vcd"
 [dumpfile_mtime] "Sat Apr  8 19:52:47 2023"
 [dumpfile_size] 20136
-[savefile] "/Users/shalan/work/ms_tmr32/ms_tmr32_tb.gtkw"
+[savefile] "/Users/shalan/work/EF_TMR32/EF_TMR32_tb.gtkw"
 [timestart] 23200
 [size] 1562 912
 [pos] -1 -1

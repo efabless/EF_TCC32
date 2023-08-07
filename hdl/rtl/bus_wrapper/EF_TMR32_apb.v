@@ -8,7 +8,7 @@
 
 `define     APB_REG(name, init_value)    always @(posedge PCLK or negedge PRESETn) if(~PRESETn) name <= init_value; else if(apb_we & (PADDR==``name``_ADDR)) name <= PWDATA;
 
-module ms_tmr32_apb (
+module EF_TMR32_apb (
     // APB Interface
     input  wire             PCLK,
     input  wire             PRESETn,
@@ -54,7 +54,7 @@ module ms_tmr32_apb (
     wire        en;
 
     // The IP Instance
-    ms_tmr32 ip (
+    EF_TMR32 ip (
 		.clk(clk_i),
 		.rst_n(~rst_i),
 		.ctr_in(ctr_in),

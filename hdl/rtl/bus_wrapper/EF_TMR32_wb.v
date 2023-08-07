@@ -8,7 +8,7 @@
 
 `define     WB_REG(name, init_value)    always @(posedge clk_i or posedge rst_i) if(rst_i) name <= init_value; else if(wb_we & (adr_i[15:0]==``name``_ADDR)) name <= dat_i;
 
-module ms_tmr32_wb (
+module EF_TMR32_wb (
     // WB bus Interface
     input   wire            clk_i,
     input   wire            rst_i,
@@ -56,7 +56,7 @@ module ms_tmr32_wb (
     wire        en;
 
     // The IP Instance
-    ms_tmr32 ip (
+    EF_TMR32 ip (
 		.clk(clk_i),
 		.rst_n(~rst_i),
 		.ctr_in(ctr_in),

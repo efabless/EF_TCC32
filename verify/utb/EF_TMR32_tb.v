@@ -1,4 +1,4 @@
-// file: ms_tmr32_tb.v
+// file: EF_TMR32_tb.v
 // author: mshalan@aucegypt.edu
 // Testbench for TMR
 
@@ -31,7 +31,7 @@ module TMR_tb;
 	reg[3:0]    Test;
 
 	// Instantiation of Unit Under Test
-	ms_tmr32 muv (
+	EF_TMR32 muv (
 		.clk(clk),
 		.rst_n(rst_n),
 		.ctr_in(ctr_in),
@@ -55,7 +55,7 @@ module TMR_tb;
 	);
 
     initial begin
-        $dumpfile("ms_tmr32_tb.vcd");
+        $dumpfile("EF_TMR32_tb.vcd");
         $dumpvars;
     end
 

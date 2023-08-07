@@ -1,7 +1,7 @@
 {
-    "name": "ms_tmr32",
+    "name": "EF_TMR32",
     "description": "A 32-bit Timer/Counter/Capture/PWM peripheral.",
-    "repo": "github.com/shalan/ms_tmr32",
+    "repo": "github.com/shalan/EF_TMR32",
     "author": "Mohamed Shalan",
     "email": "mshalan@aucegypt.edu",
     "version": "0.9",

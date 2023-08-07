@@ -1,12 +1,12 @@
 /*
-    Testbench for the WB wrapper for the ms_tmr32 IP (ms_tmr32_wb)
+    Testbench for the WB wrapper for the EF_TMR32 IP (EF_TMR32_wb)
     Author: Mohamed Shalan (mshalan@aucegypt.edu)
     License: MIT
 */
 
 `timescale 1ns/1ns
 
-module ms_tmr32_wb_tb;
+module EF_TMR32_wb_tb;
 
     localparam 
         TMR_REG_ADDR        =   32'h00,
@@ -56,7 +56,7 @@ module ms_tmr32_wb_tb;
     wire        pwm_out;
     wire        irq;
 
-    ms_tmr32_wb muv (
+    EF_TMR32_wb muv (
         .clk_i(clk_i),
         .rst_i(rst_i),
         .adr_i(adr_i),
@@ -74,7 +74,7 @@ module ms_tmr32_wb_tb;
 
     // Dump the signals
     initial begin
-        $dumpfile("ms_tmr32_wb_tb.vcd");
+        $dumpfile("EF_TMR32_wb_tb.vcd");
         $dumpvars;
     end
 

@@ -36,13 +36,13 @@
 #define MS_TMR32_CTRL_EVENT_NEG         0x2000000
 #define MS_TMR32_CTRL_EVENT_BOTH        0x3000000
 
-volatile unsigned int * ms_tmr32_tmr_reg        = (volatile unsigned int *) (MS_TMR32_TMR_REG_ADDR    );
-volatile unsigned int * ms_tmr32_period_reg     = (volatile unsigned int *) (MS_TMR32_PERIOD_REG_ADDR );
-volatile unsigned int * ms_tmr32_pwmcmp_reg     = (volatile unsigned int *) (MS_TMR32_PWMCMP_REG_ADDR );
-volatile unsigned int * ms_tmr32_match_reg      = (volatile unsigned int *) (MS_TMR32_MATCH_REG_ADDR  );
-volatile unsigned int * ms_tmr32_counter_reg    = (volatile unsigned int *) (MS_TMR32_COUNTER_REG_ADDR);
-volatile unsigned int * ms_tmr32_ctrl_reg       = (volatile unsigned int *) (MS_TMR32_CTRL_REG_ADDR   );
-volatile unsigned int * ms_tmr32_ris_reg        = (volatile unsigned int *) (MS_TMR32_RIS_REG_ADDR    );
-volatile unsigned int * ms_tmr32_mis_reg        = (volatile unsigned int *) (MS_TMR32_MIS_REG_ADDR    );
-volatile unsigned int * ms_tmr32_im_reg         = (volatile unsigned int *) (MS_TMR32_IM_REG_ADDR     );
-volatile unsigned int * ms_tmr32_icr_reg        = (volatile unsigned int *) (MS_TMR32_ICR_REG_ADDR    );
+volatile unsigned int * EF_TMR32_tmr_reg        = (volatile unsigned int *) (MS_TMR32_TMR_REG_ADDR    );
+volatile unsigned int * EF_TMR32_period_reg     = (volatile unsigned int *) (MS_TMR32_PERIOD_REG_ADDR );
+volatile unsigned int * EF_TMR32_pwmcmp_reg     = (volatile unsigned int *) (MS_TMR32_PWMCMP_REG_ADDR );
+volatile unsigned int * EF_TMR32_match_reg      = (volatile unsigned int *) (MS_TMR32_MATCH_REG_ADDR  );
+volatile unsigned int * EF_TMR32_counter_reg    = (volatile unsigned int *) (MS_TMR32_COUNTER_REG_ADDR);
+volatile unsigned int * EF_TMR32_ctrl_reg       = (volatile unsigned int *) (MS_TMR32_CTRL_REG_ADDR   );
+volatile unsigned int * EF_TMR32_ris_reg        = (volatile unsigned int *) (MS_TMR32_RIS_REG_ADDR    );
+volatile unsigned int * EF_TMR32_mis_reg        = (volatile unsigned int *) (MS_TMR32_MIS_REG_ADDR    );
+volatile unsigned int * EF_TMR32_im_reg         = (volatile unsigned int *) (MS_TMR32_IM_REG_ADDR     );
+volatile unsigned int * EF_TMR32_icr_reg        = (volatile unsigned int *) (MS_TMR32_ICR_REG_ADDR    );
