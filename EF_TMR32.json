@@ -8,6 +8,7 @@
         "author": "Mohamed Shalan",
         "email": "mshalan@aucegypt.edu",
         "version": "v1.0.0",
+        "date": "3-18-2023",
         "category": "1",
         "tags": [
             "peripheral",
@@ -25,7 +26,9 @@
         "height": "0.0",
         "technology": "n/a",
         "clock_freq_mhz": "10",
-        "supply_voltage": "n/a"
+        "supply_voltage": [
+            "n/a"
+        ]
     },
     "regs": [
         {
