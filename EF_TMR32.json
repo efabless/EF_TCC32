@@ -1,18 +1,35 @@
 {
-    "name": "ms_tmr32",
-    "description": "A 32-bit Timer/Counter/Capture/PWM peripheral.",
-    "repo": "github.com/shalan/ms_tmr32",
-    "author": "Mohamed Shalan",
-    "email": "mshalan@aucegypt.edu",
-    "version": "0.9",
-    "date": "3-18-2023",
-    "license": "MIT",
-    "category": "digital",
-    "type": "soft",
-    "status": "np",
-    "width": "0",
-    "height": "0",
-    "cell_count": "690",
+    "info": {
+        "name": "EF_TMR32",
+        "description": "A 32-bit Timer/Counter/Capture/PWM peripheral.",
+        "repo": "github.com/efabless/EF_TMR32",
+        "owner": "efabless",
+        "license": "MIT",
+        "author": "Mohamed Shalan",
+        "email": "mshalan@aucegypt.edu",
+        "version": "v1.0.0",
+        "date": "3-18-2023",
+        "category": "digital",
+        "tags": [
+            "peripheral",
+            "time",
+            "counter",
+            "PWM"
+        ],
+        "bus": [
+            "generic"
+        ],
+        "type": "soft",
+        "status": "verified",
+        "cell_count": "690",
+        "width": "0.0",
+        "height": "0.0",
+        "technology": "n/a",
+        "clock_freq_mhz": "10",
+        "supply_voltage": [
+            "n/a"
+        ]
+    },
     "regs": [
         {
             "name": "timer",

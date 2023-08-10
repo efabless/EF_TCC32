@@ -43,7 +43,7 @@
       + cp_flag : event count ready
 */
 
-module ms_tmr32 (		
+module EF_TMR32 (		
     input           clk,
     input 		    rst_n,
     input		    ctr_in,
