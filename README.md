@@ -17,7 +17,7 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
 
 ## The Interface
 ### EF_TMR32
-<img src="./docs/EF_TMR32.svg" alt= “” width="60%" height="60%">
+<img src="./doc/EF_TMR32.svg" alt= “” width="60%" height="60%">
 
 
 | Port name  | Direction | Type   | Description |
@@ -44,7 +44,7 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
 | en         | input     |        | Global enable            |
 
 ### EF_TMR32_wb
-<img src="./docs/EF_TMR32_wb.svg" alt= “” width="80%" height="80%">
+<img src="./doc/EF_TMR32_wb.svg" alt= “” width="80%" height="80%">
 
 | Port name | Direction | Type           | Description |
 | --------- | --------- | -------------- | ----------- |
@@ -63,7 +63,7 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
 | irq       | output    | wire           | Interrupt ReQuest output            |
 
 ### EF_TMR32_apb
-<img src="./docs/EF_TMR32_apb.svg" alt= “” width="70%" height="70%">
+<img src="./doc/EF_TMR32_apb.svg" alt= “” width="70%" height="70%">
 
 | Port name | Direction | Type         | Description |
 | --------- | --------- | ------------ | ----------- |
@@ -80,7 +80,7 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
 | irq       | output    | wire           | Interrupt ReQuest output            |
 ## EF_TMR32 Internals
 
-![Diagram](./docs/EF_TMR32_bd.png "Diagram")
+![Diagram](./doc/EF_TMR32_bd.png "Diagram")
 
 ## Modes of Operation
 | mode | tmr_en | pwm_en | cp_en | clk_src| description |
@@ -92,30 +92,30 @@ A 32-bit Timer/Counter/Capture/PWM Soft IP in Verilog. It comes with wrappers fo
 
 ## I/O Registers
 ### Timer Value Register [offset: 0x00, RO]
-![Diagram](./docs/reg32.svg "Diagram")
+![Diagram](./doc/reg32.svg "Diagram")
 ### Timer Period Register [offset: 0x04, RW]
-![Diagram](./docs/reg32.svg "Diagram")
+![Diagram](./doc/reg32.svg "Diagram")
 ### PWM Compare Register [offset: 0x08, RW]
-![Diagram](./docs/reg32.svg "Diagram")
+![Diagram](./doc/reg32.svg "Diagram")
 ### Counter Match Register [offset: 0x0C, RW]
-![Diagram](./docs/reg32.svg "Diagram")
+![Diagram](./doc/reg32.svg "Diagram")
 ### Control Register [offset: 0x100, RW]
-![Diagram](./docs/ctrl.svg "Diagram")
+![Diagram](./doc/ctrl.svg "Diagram")
 ### Raw Interrupts Status Register [offset: 0x200, RO]
 Reflects the status of interrupts trigger conditions detected (raw, prior to masking). 
 - to: Time-out Flag
 - cp: Capture Flag
 - match: Match Flag
 
-![Diagram](./docs/flags.svg "Diagram")
+![Diagram](./doc/flags.svg "Diagram")
 ### Masked Interrupts Status Register [offset: 0x204, RO]
 Similar to RIS but shows the state of the interrupt after masking. MIS register is always RIS & IM.
-![Diagram](./docs/flags.svg "Diagram")
+![Diagram](./doc/flags.svg "Diagram")
 
 ### Interrupts Mask Register [offset: 0x208, RW]
 Disabling/ENabling an interrupt source.
-![Diagram](./docs/flags.svg "Diagram")
+![Diagram](./doc/flags.svg "Diagram")
 
 ### Interrupt Clear Register [offset: 0x20c, RW]
 Writing a 1 to a bit in this register clears the corresponding interrupt state in the RIS Register. 
-![Diagram](./docs/flags.svg "Diagram")
+![Diagram](./doc/flags.svg "Diagram")
