@@ -1,8 +1,18 @@
-// file: TMR.v
-// author: mshalan@aucegypt.edu
+/*
+	Copyright 2020 Efabless Corp.
 
-`timescale          1ns/1ns
-`default_nettype    none
+	Author: Mohamed Shalan (mshalan@efabless.com)
+	
+	Licensed under the Apache License, Version 2.0 (the "License"); 
+	you may not use this file except in compliance with the License. 
+	You may obtain a copy of the License at:
+	http://www.apache.org/licenses/LICENSE-2.0
+	Unless required by applicable law or agreed to in writing, software 
+	distributed under the License is distributed on an "AS IS" BASIS, 
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+	See the License for the specific language governing permissions and 
+	limitations under the License.
+*/
 
 /*
   A 32-bit Timer/Counter and PWM generator with an 8-bit prescalar. 
@@ -43,13 +53,16 @@
       + cp_flag : event count ready
 */
 
-module EF_TMR32 (		
+`timescale          1ns/1ns
+`default_nettype    none
+
+module EF_TCC32 (		
     input           clk,
     input 		    rst_n,
     input		    ctr_in,
-    output	        pwm_out,
+    //output	        pwm_out,
     input   [31:0] 	period,
-    input   [31:0] 	pwm_cmp,
+    //input   [31:0] 	pwm_cmp,
     input   [31:0]  ctr_match,
     output	[31:0]	tmr,
     output  [31:0]  cp_count,
@@ -59,7 +72,7 @@ module EF_TMR32 (
     input			tmr_en,
     input			one_shot,
     input			up,
-    input			pwm_en,
+    //input			pwm_en,
     input           cp_en,
     input   [1:0]   cp_event,
     output          cp_flag,
@@ -128,7 +141,8 @@ module EF_TMR32 (
         else if(to_flag & one_shot)
             stop <= 1'b1;
             
-    // PWM		
+    // PWM
+    /*		
     wire	pwm_toggle = (tmr == pwm_cmp);
     always @ (posedge clk or negedge rst_n)
         if(!rst_n)
@@ -138,7 +152,7 @@ module EF_TMR32 (
                     pwm_out <= 1'b1;
                 else if(to_flag) 
                     pwm_out <= 1'b0;
-            
+    */        
     // Capture Events
     reg [31:0]  cp_ctr;
     reg [31:0]  cp_count;
