@@ -1,9 +1,9 @@
 {
     "info": {
-        "name": "EF_TMR32",
-        "description": "A 32-bit Timer/Counter/Capture/PWM peripheral.",
+        "name": "EF_TCC32",
+        "description": "A 32-bit Timer/Counter/Capture peripheral.",
         "repo": "github.com/efabless/EF_TMR32",
-        "owner": "efabless",
+        "owner": "Efabless Corp.",
         "license": "MIT",
         "author": "Mohamed Shalan",
         "email": "mshalan@aucegypt.edu",
@@ -12,9 +12,9 @@
         "category": "digital",
         "tags": [
             "peripheral",
-            "time",
+            "timer",
             "counter",
-            "PWM"
+            "capture"
         ],
         "bus": [
             "generic"
@@ -59,20 +59,6 @@
             ]
         },
         {
-            "name": "pwmcmp",
-            "size": "32",
-            "mode": "rw",
-            "init": "0",
-            "fields": [
-                {
-                    "name": "pwm_cmp",
-                    "from": "0",
-                    "size": "32",
-                    "port": "pwm_cmp"
-                }
-            ]
-        },
-        {
             "name": "counter",
             "size": "32",
             "mode": "ro",
@@ -82,6 +68,20 @@
                     "from": "0",
                     "size": "32",
                     "port": "cp_count"
+                }
+            ]
+        },
+        {
+            "name": "counter_match",
+            "size": "32",
+            "mode": "rw",
+            "init": "0",
+            "fields": [
+                {
+                    "name": "ctr_match",
+                    "from": "0",
+                    "size": "32",
+                    "port": "ctr_match"
                 }
             ]
         },
@@ -102,12 +102,6 @@
                     "from": "1",
                     "size": "1",
                     "port": "tmr_en"
-                },
-                {
-                    "name": "pwm_en",
-                    "from": "2",
-                    "size": "1",
-                    "port": "pwm_en"
                 },
                 {
                     "name": "cp_en",
@@ -140,20 +134,6 @@
                     "port": "cp_event"
                 }
             ]
-        },
-        {
-          "name": "match",
-          "size": "32",
-          "mode": "rw",
-          "init": "0",
-          "fields": [
-            {
-                "name": "match",
-                "from": "0",
-                "size": "32",
-                "port": "cp_match"
-            }
-          ]
         }
     ],
     "interface": [
@@ -161,12 +141,6 @@
             "name": "ext_clk",
             "port": "ctr_in",
             "dir": "input",
-            "size": "1"
-        },
-        {
-            "name": "pwm_out",
-            "port": "pwm_out",
-            "dir": "output",
             "size": "1"
         }
     ],
@@ -176,13 +150,14 @@
             "port": "to_flag"
         },
         {
-            "name": "match",
-            "port": "match_flag"
-        },
-        {
             "name": "cp",
             "port": "cp_flag"
+        },
+        {
+            "name": "match",
+            "port": "match_flag"
         }
+        
     ],
     "clock": "clk",
     "reset": {
@@ -191,9 +166,9 @@
     },
     "ports":[
       {"name": "ctr_in", "size": "1"},
-      {"name": "pwm_out", "size": "1"},
+      
       {"name": "period", "size": "32"},
-      {"name": "pwm_cmp", "size": "32"},
+      
       {"name": "ctr_match", "size": "32"},
       {"name": "tmr", "size": "32"},
       {"name": "cp_count", "size": "32"},
@@ -203,7 +178,6 @@
       {"name": "tmr_en", "size": "1"},
       {"name": "one_shot", "size": "1"},
       {"name": "up", "size": "1"},
-      {"name": "pwm_en", "size": "1"},
       {"name": "cp_en", "size": "1"},
       {"name": "cp_event", "size": "2"},
       {"name": "cp_flag", "size": "1"},
