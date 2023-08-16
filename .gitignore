@@ -54,3 +54,4 @@ dkms.conf
 # Verilog
 .vcd
 a.out
+.vvp
