@@ -37,7 +37,7 @@ A 32-bit Timer/Counter/Capture Soft IP in Verilog HDL. It has a generic bus inte
 
 ## EF_TMR32 Internals
 
-![Diagram](./doc/EF_TMR32_bd.png "Diagram")
+![Diagram](./doc//_static/EF_TCC32_bd.png "Diagram")
 
 ## Modes of Operation
 | mode | tmr_en | pwm_en | cp_en | clk_src| description |
@@ -48,30 +48,30 @@ A 32-bit Timer/Counter/Capture Soft IP in Verilog HDL. It has a generic bus inte
 
 ## I/O Registers
 ### Timer Value Register [offset: 0x00, RO]
-![Diagram](./doc/reg32.svg "Diagram")
+![Diagram](./doc/_static/reg32.svg "Diagram")
 ### Timer Period Register [offset: 0x04, RW]
-![Diagram](./doc/reg32.svg "Diagram")
+![Diagram](./doc//_static/reg32.svg "Diagram")
 ### PWM Compare Register [offset: 0x08, RW]
-![Diagram](./doc/reg32.svg "Diagram")
+![Diagram](./doc//_static/reg32.svg "Diagram")
 ### Counter Match Register [offset: 0x0C, RW]
-![Diagram](./doc/reg32.svg "Diagram")
+![Diagram](./doc//_static/reg32.svg "Diagram")
 ### Control Register [offset: 0x100, RW]
-![Diagram](./doc/ctrl.svg "Diagram")
+![Diagram](./doc//_static/ctrl.svg "Diagram")
 ### Raw Interrupts Status Register [offset: 0xF00, RO]
 Reflects the status of interrupts trigger conditions detected (raw, prior to masking). 
 - to: Time-out Flag
 - cp: Capture Flag
 - match: Match Flag
 
-![Diagram](./doc/flags.svg "Diagram")
+![Diagram](./doc//_static/flags.svg "Diagram")
 ### Masked Interrupts Status Register [offset: 0xF04, RO]
 Similar to RIS but shows the state of the interrupt after masking. MIS register is always RIS & IM.
-![Diagram](./doc/flags.svg "Diagram")
+![Diagram](./doc//_static/flags.svg "Diagram")
 
 ### Interrupts Mask Register [offset: 0xF08, RW]
 Disabling/ENabling an interrupt source.
-![Diagram](./doc/flags.svg "Diagram")
+![Diagram](./doc//_static/flags.svg "Diagram")
 
 ### Interrupt Clear Register [offset: 0xF0C, RW]
 Writing a 1 to a bit in this register clears the corresponding interrupt state in the RIS Register. 
-![Diagram](./doc/flags.svg "Diagram")
+![Diagram](./doc//_static/flags.svg "Diagram")
