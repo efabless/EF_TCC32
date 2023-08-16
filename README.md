@@ -1,4 +1,4 @@
-# EF_TMR32
+# EF_TCC32
 A 32-bit Timer/Counter/Capture Soft IP in Verilog HDL. It has a generic bus interface compatible with wrapper_gen.py. Three bus wrappers are provided for: AHB-Lite, APB and WB. 
 
 ## Features
