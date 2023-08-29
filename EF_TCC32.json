@@ -4,7 +4,7 @@
         "description": "A 32-bit Timer/Counter/Capture peripheral.",
         "repo": "github.com/efabless/EF_TMR32",
         "owner": "Efabless Corp.",
-        "license": "MIT",
+        "license": "Apache 2.0",
         "author": "Mohamed Shalan",
         "email": "mshalan@aucegypt.edu",
         "version": "v1.0.0",
