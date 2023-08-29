@@ -31,8 +31,8 @@
 `default_nettype	none
 
 `define		APB_BLOCK(name, init)	always @(posedge PCLK or negedge PRESETn) if(~PRESETn) name <= init;
-`define		APB_REG(name, init)		`APB_BLOCK(name, init) else if(apb_we & (PADDR==``name``_ADDR)) name <= PWDATA;
-`define		APB_ICR(sz)				`APB_BLOCK(ICR_REG, sz'b0) else if(apb_we & (PADDR==ICR_REG_ADDR)) ICR_REG <= PWDATA; else ICR_REG <= sz'd0;
+`define		APB_REG(name, init)		`APB_BLOCK(name, init) else if(apb_we & (PADDR[15:0]==``name``_ADDR)) name <= PWDATA;
+`define		APB_ICR(sz)				`APB_BLOCK(ICR_REG, sz'b0) else if(apb_we & (PADDR[15:0]==ICR_REG_ADDR)) ICR_REG <= PWDATA; else ICR_REG <= sz'd0;
 
 module EF_TCC32_apb (
 	input	wire 		ext_clk,
@@ -130,15 +130,15 @@ module EF_TCC32_apb (
 	assign irq = |MIS_REG;
 
 	assign	PRDATA = 
-			(PADDR == PERIOD_REG_ADDR) ? PERIOD_REG :
-			(PADDR == COUNTER_MATCH_REG_ADDR) ? COUNTER_MATCH_REG :
-			(PADDR == CONTROL_REG_ADDR) ? CONTROL_REG :
-			(PADDR == RIS_REG_ADDR) ? RIS_REG :
-			(PADDR == ICR_REG_ADDR) ? ICR_REG :
-			(PADDR == IM_REG_ADDR) ? IM_REG :
-			(PADDR == TIMER_REG_ADDR) ? TIMER_REG :
-			(PADDR == COUNTER_REG_ADDR) ? COUNTER_REG :
-			(PADDR == MIS_REG_ADDR) ? MIS_REG :
+			(PADDR[15:0] == PERIOD_REG_ADDR) ? PERIOD_REG :
+			(PADDR[15:0] == COUNTER_MATCH_REG_ADDR) ? COUNTER_MATCH_REG :
+			(PADDR[15:0] == CONTROL_REG_ADDR) ? CONTROL_REG :
+			(PADDR[15:0] == RIS_REG_ADDR) ? RIS_REG :
+			(PADDR[15:0] == ICR_REG_ADDR) ? ICR_REG :
+			(PADDR[15:0] == IM_REG_ADDR) ? IM_REG :
+			(PADDR[15:0] == TIMER_REG_ADDR) ? TIMER_REG :
+			(PADDR[15:0] == COUNTER_REG_ADDR) ? COUNTER_REG :
+			(PADDR[15:0] == MIS_REG_ADDR) ? MIS_REG :
 			32'hDEADBEEF;
 
 
