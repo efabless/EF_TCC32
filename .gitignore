@@ -52,9 +52,9 @@ Mkfile.old
 dkms.conf
 
 # Verilog
-.vcd
+*.vcd
 a.out
 .vvp
-util\
-tmp\
+util
+tmp
 .DS_Store
