@@ -57,29 +57,26 @@
 `default_nettype    none
 
 module EF_TCC32 (		
-    input           clk,
-    input 		    rst_n,
-    input		    ctr_in,
-    //output	        pwm_out,
-    input   [31:0] 	period,
-    //input   [31:0] 	pwm_cmp,
-    input   [31:0]  ctr_match,
-    output	[31:0]	tmr,
-    output  [31:0]  cp_count,
-    input   [3:0]   clk_src,
-    output			to_flag,
-    output          match_flag,
-    input			tmr_en,
-    input			one_shot,
-    input			up,
-    //input			pwm_en,
-    input           cp_en,
-    input   [1:0]   cp_event,
-    output          cp_flag,
-    input           en
+    input   wire            clk,
+    input   wire	        rst_n,
+    input	wire	        ctr_in,
+    input   wire [31:0]     period,
+    input   wire [31:0]     ctr_match,
+    output  reg  [31:0]     tmr,
+    output  reg  [31:0]     cp_count,
+    input   wire [ 3:0]     clk_src,
+    output  wire	        to_flag,
+    output  wire            match_flag,
+    input	wire	        tmr_en,
+    input	wire	        one_shot,
+    input	wire	        up,
+    input   wire            cp_en,
+    input   wire [1:0]      cp_event,
+    output  wire            cp_flag,
+    input   wire            en
 );
 			
-    reg	[31:0]	    tmr;
+    //reg	[31:0]	    tmr;
     wire            ctr_clk;
     reg			    stop;
     reg			    pwm_out;
@@ -155,7 +152,7 @@ module EF_TCC32 (
     */        
     // Capture Events
     reg [31:0]  cp_ctr;
-    reg [31:0]  cp_count;
+    //reg [31:0]  cp_count;
     reg         cp_counting;
     wire        cp_pos, cp_neg;
     reg         ctr_in_sync_delayed;
