@@ -6,7 +6,7 @@
         "owner": "Efabless Corp.",
         "license": "Apache 2.0",
         "author": "Mohamed Shalan",
-        "email": "mshalan@aucegypt.edu",
+        "email": "mshalan@efabless.com",
         "version": "v1.0.0",
         "date": "3-18-2023",
         "category": "digital",
@@ -28,6 +28,14 @@
         "clock_freq_mhz": "10",
         "supply_voltage": [
             "n/a"
+        ],
+        "tech":[
+            "sky130":{
+                "gl_netlist": True,
+                "cell_count": "1190",
+                "is":"2.9",
+                "id":"23777"
+            }
         ]
     },
     "regs": [
@@ -166,9 +174,7 @@
     },
     "ports":[
       {"name": "ctr_in", "size": "1"},
-      
       {"name": "period", "size": "32"},
-      
       {"name": "ctr_match", "size": "32"},
       {"name": "tmr", "size": "32"},
       {"name": "cp_count", "size": "32"},
