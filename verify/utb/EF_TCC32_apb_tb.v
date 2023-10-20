@@ -6,7 +6,7 @@
 
 `timescale 1ns/1ns
 
-module EF_TMR32_wb_tb;
+module EF_TCC32_wb_tb;
 
     `include "params.vh"
     `include "apb_tasks.vh"
