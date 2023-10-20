@@ -48,7 +48,7 @@
       + match_flag : if(tmr == ctr_match) 
     
     - Event Capture (cp_en = 1)
-      + cp_event : 1: negedge, 2: posedge, 3: both
+      + cp_event : 1: posedge, 2: negedge, 3: both
       + cp_count : count between events
       + cp_flag : event count ready
 */
