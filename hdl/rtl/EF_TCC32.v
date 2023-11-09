@@ -173,16 +173,21 @@ module EF_TCC32 (
         else if(cp_event[1] & cp_neg)
             cp_counting <= ~cp_counting;
             
-    always @(posedge clk)
-    if(!cp_counting)
-        cp_ctr <= 32'd0;
-    else if(tmr_clk)
-        cp_ctr <= cp_ctr + 1'b1;
+    always @(posedge clk or negedge rst_n)
+        if(!rst_n)
+            cp_ctr <= 32'd0;
+        else if(!cp_counting)
+            cp_ctr <= 32'd0;
+        else if(tmr_clk)
+            cp_ctr <= cp_ctr + 1'b1;
             
     // cp_flag
     reg cp_counting_delayed;
-    always @(posedge clk)
-        cp_counting_delayed <= cp_counting;
+    always @(posedge clk or negedge rst_n)
+        if(!rst_n)
+            cp_counting_delayed <= 1'b0;
+        else
+            cp_counting_delayed <= cp_counting;
     
     assign cp_flag = cp_counting_delayed & ~cp_counting;
     
@@ -205,8 +210,11 @@ module EF_TCC32 (
             match <= 1'b0;
     
     reg match_delayed;
-    always @(posedge clk)
-        match_delayed <= match;
+    always @(posedge clk or negedge rst_n)
+        if(!rst_n)
+            match_delayed <= 1'b0;
+        else
+            match_delayed <= match;
 
     assign match_flag = match & ~match_delayed;
 		
